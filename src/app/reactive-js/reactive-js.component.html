@@ -1,0 +1,20 @@
+<ul id="obs-list"></ul>
+<hr>
+
+<div class="my-icon-list">
+  <p *ngFor="let icon of iconList">
+    <mat-icon matBadge="{{icon.count}}" matBadgeColor="{{icon.color}}">{{icon.symbol}}</mat-icon>
+  </p>
+</div>
+
+<hr>
+
+<button mat-raised-button (click)="evtClick()">Click me!</button>
+<ul>
+  <li *ngFor="let evt of events">
+    {{evt}}
+  </li>
+</ul>
+
+<div (copy)="copyFunction()">SOME TEXT</div>
+<div (scroll)="scrollFunction()">SOME TEXT</div>
